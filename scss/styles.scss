@@ -1,0 +1,219 @@
+@use './utils/' as u;
+
+/* css custom properties */
+
+:root {
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-stone-100: hsl(30, 54%, 90%);
+	--clr-stone-150: hsl(30, 18%, 87%);
+	--clr-stone-600: hsl(30, 10%, 34%);
+	--clr-stone-900: hsl(24, 5%, 18%);
+	--clr-brown-800: hsl(14, 45%, 36%);
+	--clr-rose-800: hsl(332, 51%, 32%);
+	--clr-rose-50: hsl(330, 100%, 98%);
+	/* spacing system */
+	--space-1600: 8rem; //128px
+	--space-600: 3rem; //48px
+	--space-500: 2.5rem; //40px
+	--space-400: 2rem; //32px
+	--space-300: 1.5rem; //24px
+	--space-200: 1rem; //16px
+	--space-150: 0.75rem; //12px
+	--space-100: 0.5rem; //8px
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	background-color: var(--clr-stone-100);
+	font-size: 16px;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.recipe-container {
+	padding: var(--space-500);
+	background-color: var(--clr-white);
+	color: var(--clr-stone-600);
+	min-height: 100vh;
+
+	@include u.fs-body-400;
+
+	@media screen and (min-width: 600px) {
+		margin-block: var(--space-1600);
+		margin-inline: auto;
+		max-width: 616px;
+		border-radius: var(--space-300);
+	}
+
+	@media screen and (min-width: 769px) {
+		max-width: 736px;
+	}
+}
+
+.img-container {
+	margin-top: -2.5rem;
+	margin-inline: -2rem;
+
+	@media screen and (min-width: 600px) {
+		margin-top: 0;
+		margin-inline: 0;
+	}
+}
+
+img.img {
+	@media screen and (min-width: 600px) {
+		border-radius: var(--space-150);
+	}
+}
+
+aside {
+	background-color: var(--clr-rose-50);
+	margin-block: var(--space-400);
+	padding: var(--space-300);
+	border-radius: 12px;
+}
+
+ul.time-list {
+	margin-top: var(--space-300);
+	list-style: none;
+
+	li {
+		@include u.fs-body-400;
+		color: var(--clr-stone-600);
+		margin-top: var(--space-100);
+	}
+	li:first-child {
+		margin-top: 0;
+	}
+	li::before {
+		content: '•';
+		margin-right: var(--space-200);
+		margin-left: var(--space-100);
+		color: var(--clr-rose-800);
+	}
+}
+
+main {
+	ul,
+	ol {
+		margin-top: var(--space-300);
+	}
+}
+
+h1 {
+	margin-top: var(--space-500);
+	color: var(--clr-stone-900);
+
+	@include u.fs-header;
+}
+
+hr {
+	border: none;
+	height: 1px;
+	background: var(--clr-stone-150);
+	margin-block: var(--space-400);
+}
+h2 {
+	color: var(--clr-brown-800);
+
+	@include u.fs-subheader;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	& + p {
+		margin-top: var(--space-300);
+	}
+}
+
+h3 {
+	@include u.fs-title-600;
+	color: var(--clr-rose-800);
+}
+
+p.recipe-description {
+	margin-top: var(--space-300);
+}
+
+ul.ingredients-list {
+	list-style: none;
+
+	li::before {
+		content: '•';
+		margin-right: var(--space-200);
+		margin-left: var(--space-100);
+		color: var(--clr-rose-800);
+	}
+}
+
+ol.instructions-list {
+	margin-left: u.rem(18);
+
+	li {
+		padding-left: var(--space-200);
+		margin-top: var(--space-100);
+	}
+
+	li:first-child {
+		margin-top: 0;
+	}
+
+	li::marker {
+		color: var(--clr-brown-800);
+
+		@include u.fs-body-700;
+	}
+}
+
+table {
+	margin-top: var(--space-300);
+	width: 100%;
+
+	tr {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: start;
+		justify-content: space-around;
+		gap: 1em;
+
+		width: auto;
+		border-bottom: 1px solid var(--clr-stone-150);
+	}
+}
+
+th,
+td {
+	padding-block: var(--space-200);
+}
+
+th {
+	@include u.fs-body-400;
+	color: var(--clr-stone-600);
+}
+
+td {
+	@include u.fs-body-700;
+	color: var(--clr-brown-800);
+}
+
+/* attribution */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

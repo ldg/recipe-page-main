@@ -1,0 +1,45 @@
+/* Typography presets */
+@mixin fs-header {
+	font-family: 'Young serif', serif;
+	font-weight: 400;
+	font-size: 2.5rem;
+	line-height: 1;
+}
+
+@mixin fs-header-mobile {
+	font-family: 'Young serif', serif;
+	font-weight: 400;
+	font-size: 2.25rem;
+	line-height: 1;
+}
+
+@mixin fs-subheader {
+	font-family: 'Young serif', serif;
+	font-weight: 400;
+	font-size: 1.75rem;
+	line-height: 1;
+}
+/* semibold  - used in aside */
+@mixin fs-title-600 {
+	font-family: 'Outfit', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-size: 1.25rem;
+	line-height: 1;
+}
+/* regular */
+@mixin fs-body-400 {
+	font-family: 'Outfit', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+/* bold*/
+@mixin fs-body-700 {
+	font-family: 'Outfit', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 1.5;
+}
