@@ -93,6 +93,15 @@ aside {
   border-radius: 12px;
 }
 
+p.time-title {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--clr-rose-800);
+}
+
 ul.time-list {
   margin-top: var(--space-300);
   list-style: none;
@@ -149,15 +158,6 @@ h2:first-child {
 }
 h2 + p {
   margin-top: var(--space-300);
-}
-
-h3 {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1;
-  color: var(--clr-rose-800);
 }
 
 p.recipe-description {

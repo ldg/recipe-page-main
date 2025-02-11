@@ -85,6 +85,11 @@ aside {
 	border-radius: 12px;
 }
 
+p.time-title {
+	@include u.fs-title-600;
+	color: var(--clr-rose-800);
+}
+
 ul.time-list {
 	margin-top: var(--space-300);
 	list-style: none;
@@ -137,11 +142,6 @@ h2 {
 	& + p {
 		margin-top: var(--space-300);
 	}
-}
-
-h3 {
-	@include u.fs-title-600;
-	color: var(--clr-rose-800);
 }
 
 p.recipe-description {
